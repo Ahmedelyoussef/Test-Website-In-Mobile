@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+}
+/* Start Header */
+header {
+  padding: 10px 0;
+  background-color: #33211d;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+header .logo:hover {
+  cursor: pointer;
+}
+nav a {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+nav .special,
+a:hover,
+.fa-bars:hover {
+  color: #da9f5b;
+}
+header .fa-bars {
+  display: none;
+  font-size: clamp(20px, 5vw, 35px);
+  color: rgb(255 255 255 / 50%);
+}
+@media screen and (max-width: 991px) {
+  header .fa-bars {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
+.hero .carousel-caption {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+/* End Header */
+/* Start About Section */
+.about {
+  background-color: #fffbf2;
+  padding: 40px 2rem;
+}
+.about .separtor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.about .separtor span {
+  display: inline-block;
+  width: 2px;
+  height: 100px;
+  background-color: #da9f5b;
+}
+.about .title {
+  text-align: center;
+}
+
+.about .title h4 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #da9f5b;
+}
+.about .title h1 {
+  font-weight: 700;
+  font-size: clamp(35px, 6vw, 56px);
+}
+.about .story-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .story-vision .story,
+.about .story-vision .vision {
+  margin: 2rem 0;
+}
+.about .story-vision .story h1 {
+  font-weight: 700;
+  color: #33211d;
+  margin: 0 0 16px;
+}
+.about .story-vision .story h5,
+.about .story-vision .vision h5 {
+  font-weight: 400;
+  line-height: 1.2;
+  color: #33211d;
+}
+.about .story-vision .story p,
+.about .story-vision .vision p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+}
+.about .story-vision .story button {
+  padding: 10px 20px;
+  background-color: #33211d;
+  color: white;
+  transition: 1s;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+}
+.about .story-vision .story button:hover {
+  background-color: black;
+}
+.about .story-vision img {
+  width: 500px;
+}
+.about .story-vision .vision h5 {
+  font-size: 16px;
+}
+.about .story-vision .vision h5 i {
+  color: #da9f5b;
+}
+.about .story-vision .vision button {
+  padding: 10px 20px;
+  background-color: #da9f5b;
+  color: white;
+  transition: 1s;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+}
+.about .story-vision .vision button:hover {
+  background-color: #996a33;
+}
+@media screen and (max-width: 991px) {
+  .about {
+    overflow: hidden;
+  }
+  .about .story-vision {
+    flex-direction: column;
+  }
+}
+/* End About Section */
+.services {
+  background-color: #fffbf2;
+  padding: 40px 2rem;
+}
+.services .separtor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.services .separtor span {
+  display: inline-block;
+  width: 2px;
+  height: 100px;
+  background-color: #da9f5b;
+}
+.services .title {
+  text-align: center;
+}
+
+.services .title h4 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #da9f5b;
+}
+.services .title h1 {
+  font-weight: 700;
+  font-size: clamp(35px, 6vw, 56px);
+}
+.services .all-services {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.services .all-services .services-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: calc((100% - 2rem) / 2);
+}
+.services .all-services .services-1 img {
+  max-width: 200px;
+  /* width: clamp(); */
+}
+.services .all-services .services-1 .description h4 i {
+  padding: 10px;
+  background-color: #da9f5b;
+  color: #33211d;
+  border-radius: 50%;
+}
+@media screen and (max-width: 991px) {
+  .services .all-services {
+    flex-direction: column;
+  }
+  .services .all-services .services-1 {
+    width: 100%;
+  }
+}
