@@ -58,6 +58,18 @@ header .fa-bars {
   bottom: auto;
   transform: translateY(-50%);
 }
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/separator-after.png);
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  left: 0;
+}
 /* End Header */
 /* Start About Section */
 .about {
@@ -158,9 +170,11 @@ header .fa-bars {
   }
 }
 /* End About Section */
+/* Start Services Section */
 .services {
   background-color: #fffbf2;
-  padding: 40px 2rem;
+  padding: 20px 2rem 40px;
+  position: relative;
 }
 .services .separtor {
   display: flex;
@@ -195,27 +209,177 @@ header .fa-bars {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.services .all-services .services-1 {
+.services .all-services .service {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   width: calc((100% - 2rem) / 2);
 }
-.services .all-services .services-1 img {
+.services .all-services .service img {
   max-width: 200px;
-  /* width: clamp(); */
+  /* width: clamp(150px, 5vw, 200px); */
 }
-.services .all-services .services-1 .description h4 i {
+.services .all-services .service .description h4 i {
   padding: 10px;
   background-color: #da9f5b;
   color: #33211d;
   border-radius: 50%;
 }
+.services .all-services .service .description p {
+  color: #555;
+}
+
 @media screen and (max-width: 991px) {
   .services .all-services {
     flex-direction: column;
   }
-  .services .all-services .services-1 {
+  .services .all-services .service {
     width: 100%;
   }
 }
+@media screen and (max-width: 600px) {
+  .services .all-services .service {
+    flex-direction: column;
+  }
+  .services .all-services .service img {
+    max-width: 100%;
+  }
+}
+/* End Services Section */
+/* Start Offer Section */
+.offer {
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(rgba(51, 33, 29, 0.9), rgba(51, 33, 29, 0.9)),
+    url(../img/bg.jpg);
+  background-size: cover;
+}
+.offer::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/separato-before.png);
+  width: 100%;
+  height: 15px;
+  top: 0;
+  left: 0;
+}
+.offer::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/separator-after.png);
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  left: 0;
+}
+.offer .container h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 700;
+  color: #da9f5b;
+}
+.offer .container h2 {
+  color: #fff;
+  font-size: clamp(30px, 5vw, 40px);
+}
+.offer .container p {
+  font-size: clamp(20px, 5vw, 22px);
+  color: #fff;
+}
+
+.offer .container form input {
+  padding: 20px;
+  /* width: 300px; */
+}
+.offer .container form button {
+  background-color: #da9f5b;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s;
+}
+.offer .container form button:hover {
+  background-color: #d38d3c;
+}
+@media screen and (max-width: 515px) {
+  .offer .container form input {
+    /* width: 250px; */
+  }
+  .offer .container form {
+    width: 100%;
+  }
+}
+/* End Offer Section */
+/* Start Menu-Pricing Section */
+.menu-price {
+  position: relative;
+  background-color: #fffbf2;
+  padding: 40px 2rem;
+}
+.menu-price::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/separator.png);
+  width: 100%;
+  height: 16px;
+  top: -14px;
+  left: 0;
+}
+/* .menu-price .container {
+} */
+.menu-price .separtor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.menu-price .separtor span {
+  display: inline-block;
+  width: 2px;
+  height: 100px;
+  background-color: #da9f5b;
+}
+.menu-price .title {
+  text-align: center;
+}
+
+.menu-price .title h4 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #da9f5b;
+}
+.menu-price .title h1 {
+  font-weight: 700;
+  font-size: clamp(35px, 6vw, 56px);
+}
+.menu-price .container .all-menu {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.menu-price .container .all-menu .coffe {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+.menu-price .container .all-menu .coffe img {
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.menu-price .container .all-menu .coffe img::before {
+  content: "$5";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #da9f5b;
+  top: 20px;
+  right: 0;
+}
+.menu-price .container .all-menu .coffe .description p {
+  color: #555;
+}
+/* End Menu-Pricing Section */
